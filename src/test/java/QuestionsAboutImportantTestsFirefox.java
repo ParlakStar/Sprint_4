@@ -1,27 +1,12 @@
-package testOrderScooter;
-
-import org.junit.After;
-import org.junit.Before;
+import baseTest.BaseSetUpFireFox;
 import org.junit.Test;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertTrue;
 
-public class QuestionsAboutImportantTestsChrome {
-    private WebDriver driver;
-
-    @Before
-    public void setUpChrome() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("https://qa-scooter.praktikum-services.ru/");
-    }
+public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     @Test
     public void testDropdownListHowMuch() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -125,9 +110,5 @@ public class QuestionsAboutImportantTestsChrome {
         WebElement dropDownText = driver.findElement(By.xpath("//p[contains(text(), 'Да, обязательно. Всем самокатов! И Москве, и Московской области.')]"));
         String dropDownTextTest = dropDownText.getText();
         assertTrue(dropDownTextTest.contains("Да, обязательно. Всем самокатов! И Москве, и Московской области."));
-    }
-    @After
-    public void tearDown () {
-        driver.quit();
     }
 }

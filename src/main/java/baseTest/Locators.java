@@ -1,11 +1,14 @@
 package baseTest;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import static org.junit.Assert.assertEquals;
+
 public class Locators {
-        private WebDriver driver;
+        public WebDriver driver;
 
 
         //Нажимаем кнопку Заказать

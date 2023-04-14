@@ -1,26 +1,11 @@
-package testOrderScooter;
-
-import org.junit.After;
-import org.junit.Before;
+import baseTest.BaseSetUpChrome;
 import org.junit.Test;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertEquals;
-
-public class OrderScooterTestsFirefox {
-    private WebDriver driver;
-
-    @Before
-        public void setUpFirefox() {
-         FirefoxOptions options = new FirefoxOptions()
-                 .addPreference("browser.startup.page", 3)
-                 .addPreference("browser.startup.homepage", "https://qa-scooter.praktikum-services.ru");
-         driver = new FirefoxDriver(options);
-        WebElement kukiSpam = driver.findElement(By.xpath(".//button[@class='App_CookieButton__3cvqF']"));
-        kukiSpam.click();
-    }
+public class OrderScooterTestsChrome extends BaseSetUpChrome {
     @Test
     public void testOrderScooterUpButton() {
         //Нажимаем кнопку Заказать
@@ -127,10 +112,4 @@ public class OrderScooterTestsFirefox {
         String orderNumberText = orderNumberWindow.getText();
         assertEquals("Надпись 'Заказ оформлен' отображается корректно", true, orderNumberText.contains("Заказ оформлен"));
     }
-
-
-        @After
-        public void tearDown () {
-            driver.quit();
-        }
-    }
+}
