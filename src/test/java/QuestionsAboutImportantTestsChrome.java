@@ -1,7 +1,6 @@
 import baseTest.BaseSetUpChrome;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertTrue;
@@ -9,9 +8,9 @@ import static org.junit.Assert.assertTrue;
 public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     @Test
     public void testDropdownListHowMuch() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-0"));
         dropdownArrow.click();
@@ -22,9 +21,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListSeveralScooters() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-1"));
         dropdownArrow.click();
@@ -35,9 +33,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListTiming() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-2"));
         dropdownArrow.click();
@@ -48,9 +45,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListNowTime() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-3"));
         dropdownArrow.click();
@@ -61,9 +57,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListTurnInEarly() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-4"));
         dropdownArrow.click();
@@ -74,9 +69,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListCharger() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-5"));
         dropdownArrow.click();
@@ -87,9 +81,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListDoneOrder() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-6"));
         dropdownArrow.click();
@@ -100,9 +93,8 @@ public class QuestionsAboutImportantTestsChrome extends BaseSetUpChrome {
     }
     @Test
     public void testDropdownListMkad() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-7"));
         dropdownArrow.click();

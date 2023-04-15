@@ -9,9 +9,8 @@ import static org.junit.Assert.assertTrue;
 public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     @Test
     public void testDropdownListHowMuch() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-0"));
         dropdownArrow.click();
@@ -22,9 +21,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListSeveralScooters() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-1"));
         dropdownArrow.click();
@@ -35,9 +33,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListTiming() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-2"));
         dropdownArrow.click();
@@ -48,9 +45,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListNowTime() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-3"));
         dropdownArrow.click();
@@ -61,9 +57,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListTurnInEarly() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-4"));
         dropdownArrow.click();
@@ -74,9 +69,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListCharger() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-5"));
         dropdownArrow.click();
@@ -87,9 +81,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListDoneOrder() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-6"));
         dropdownArrow.click();
@@ -100,9 +93,8 @@ public class QuestionsAboutImportantTestsFirefox extends BaseSetUpFireFox {
     }
     @Test
     public void testDropdownListMkad() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
         //Скролим вниз страницы
-        js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+        jsFirefox.executeScript("window.scrollTo(0,document.body.scrollHeight)");
         //Нажимаем на всплывающий список
         WebElement dropdownArrow = driver.findElement(By.id("accordion__heading-7"));
         dropdownArrow.click();

@@ -8,14 +8,16 @@ import org.openqa.selenium.WebElement;
 import static org.junit.Assert.assertEquals;
 
 public class Locators {
-        public WebDriver driver;
+        public static WebDriver driver;
 
 
         //Нажимаем кнопку Заказать
-        WebElement orderButtonTop = driver.findElement(By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"));
+        /*public static final WebElement orderButtonTop = driver.findElement(By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"));*/
+
+        public static final WebElement orderButtonTop = driver.findElement(By.xpath("//button[.='Заказать']"));
         //Заполняем поля заказа
         //Имя
-        WebElement nameInput = driver.findElement(By.xpath(".//input[@placeholder='* Имя']"));
+        public static final WebElement nameInput = driver.findElement(By.xpath(".//input[@placeholder='* Имя']"));
         //Фамилия
         WebElement surnameInput = driver.findElement(By.xpath(".//input[@placeholder='* Фамилия']"));
         //Адресс доставки

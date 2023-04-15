@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import static org.junit.Assert.assertEquals;
+import static baseTest.Locators.*;
 public class OrderScooterTestsChrome extends BaseSetUpChrome {
     @Test
     public void testOrderScooterUpButton() {
@@ -58,7 +59,7 @@ public class OrderScooterTestsChrome extends BaseSetUpChrome {
         WebElement orderNumberWindow = driver.findElement(By.cssSelector("div.Order_ModalHeader__3FDaJ"));
         String orderNumberText = orderNumberWindow.getText();
         assertEquals("Надпись 'Заказ оформлен' отображается корректно", true, orderNumberText.contains("Заказ оформлен"));
-    }
+    }/**/
     @Test
     public void testOrderScooterDownButton() {
         //Нажимаем кнопку Заказать
