@@ -1,4 +1,4 @@
-package baseTest;
+package base;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,10 +8,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import page.BasePage;
 
-public class BaseSetUpFireFox{
-    public WebDriver driver;
+public class BaseSetUpFirefox extends BasePage {
+    protected static WebDriver driver;
     public JavascriptExecutor jsFirefox;
+
     @Before
     public void setUpFirefox() {
         FirefoxOptions options = new FirefoxOptions()
@@ -26,4 +28,8 @@ public class BaseSetUpFireFox{
     public void tearDown () {
         driver.quit();
     }
+    public static WebDriver getDriver(){
+        return driver;
+    }
+
 }
