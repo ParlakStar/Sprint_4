@@ -1,4 +1,5 @@
 import base.BaseSetUpChrome;
+import base.BaseSetUpFirefox;
 import org.junit.Test;
 import page.ActionWithOrder;
 

@@ -8,11 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import page.BasePage;
 
-public class BaseSetUpFirefox extends BasePage {
+public class BaseSetUpFirefox {
     protected static WebDriver driver;
-    public JavascriptExecutor jsFirefox;
+    protected static JavascriptExecutor jsFirefox;
 
     @Before
     public void setUpFirefox() {
@@ -20,6 +19,7 @@ public class BaseSetUpFirefox extends BasePage {
                 .addPreference("browser.startup.page", 3)
                 .addPreference("browser.startup.homepage", "https://qa-scooter.praktikum-services.ru");
         driver = new FirefoxDriver(options);
+        driver.manage().window().maximize();
         jsFirefox = (JavascriptExecutor) driver;
         WebElement kukiSpam = driver.findElement(By.xpath(".//button[@class='App_CookieButton__3cvqF']"));
         kukiSpam.click();
@@ -27,9 +27,6 @@ public class BaseSetUpFirefox extends BasePage {
     @After
     public void tearDown () {
         driver.quit();
-    }
-    public static WebDriver getDriver(){
-        return driver;
     }
 
 }
