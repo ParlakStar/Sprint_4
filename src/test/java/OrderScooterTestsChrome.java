@@ -1,10 +1,10 @@
 import base.BaseSetUpChrome;
-import base.BaseSetUpFirefox;
 import org.junit.Test;
 import page.ActionWithOrder;
 
 
-public class OrderScooterTestsChrome extends BaseSetUpChrome {
+public class OrderScooterTestsChrome {
+
 
     @Test
     public void testOrderScooterUpButton() {
@@ -24,11 +24,8 @@ public class OrderScooterTestsChrome extends BaseSetUpChrome {
         //Нажимаем кнопку далее
         ActionWithOrder.orderButtonNextPage();
         //Заполняем дату доставки
-        ActionWithOrder.deliveryDateSelection();
-        //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();
-        //Заполняем комментарий
-        ActionWithOrder.sendCommentCourier();
+        ActionWithOrder.deliveryDateSelection();  //Выбираем чек-бокс с цветом самоката
+        ActionWithOrder.choiceColorRentScooter();    //Заполняем комментарийa        actionWithOrder.sendCommentCourier();
         //Нажимаем кнопку Заказать
         ActionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа

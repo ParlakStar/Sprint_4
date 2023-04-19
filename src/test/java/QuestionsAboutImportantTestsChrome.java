@@ -1,7 +1,5 @@
 import base.BaseSetUpChrome;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import page.ActionWithAccordion;
 
 import static org.junit.Assert.assertTrue;

@@ -1,67 +1,69 @@
+import base.BaseSetUpChrome;
 import base.BaseSetUpFirefox;
 import org.junit.Test;
 import page.ActionWithOrder;
 
 public class OrderScooterTestsFirefox extends BaseSetUpFirefox {
-
+    /*ActionWithOrder actionWithOrder = new ActionWithOrder(driver);*/
     @Test
     public void testOrderScooterUpButton() {
+
         //Нажимаем кнопку Заказать
-        ActionWithOrder.clickButtonOrderUp();
+        ActionWithOrder.clickButtonOrderUp(driver);
         // Заполняем поля заказа
         //Имя
-        ActionWithOrder.sendNameInput();
+        actionWithOrder.sendNameInput(driver);
         //Фамилия
-        ActionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput(driver);
         //Адресс доставки
-        ActionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput(driver);
         //Телефон для связи с курьером
-        ActionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput(driver);
         //Выбираем станцию метро Белорусская
-        ActionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro(driver);
         //Нажимаем кнопку далее
-        ActionWithOrder.orderButtonNextPage();
+        actionWithOrder.orderButtonNextPage(driver);
         //Заполняем дату доставки
-        ActionWithOrder.deliveryDateSelection();
+        actionWithOrder.deliveryDateSelection(driver);
         //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();
+        actionWithOrder.choiceColorRentScooter(driver);
         //Заполняем комментарий
-        ActionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier(driver);
         //Нажимаем кнопку Заказать
-        ActionWithOrder.pressMakeAnOrder();
+        actionWithOrder.pressMakeAnOrder(driver);
         //Нажимаем кнопку подтверждения заказа
-        ActionWithOrder.pressConfirmTheOrder();
+        actionWithOrder.pressConfirmTheOrder(driver);
         //Выполняем сверку окна подтверждения заказа по тексту
-        ActionWithOrder.pressOrderNumberWindow();}
+        actionWithOrder.pressOrderNumberWindow(driver);}
     @Test
     public void testOrderScooterDownButton() {
         //Нажимаем кнопку Заказать
-        ActionWithOrder.clickButtonOrderDown();
+        actionWithOrder.clickButtonOrderDown(driver);
         // Заполняем поля заказа
         //Имя
-        ActionWithOrder.sendNameInput();
+        actionWithOrder.sendNameInput(driver);
         //Фамилия
-        ActionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput(driver);
         //Адресс доставки
-        ActionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput(driver);
         //Телефон для связи с курьером
-        ActionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput(driver);
         //Выбираем станцию метро Белорусская
-        ActionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro(driver);
         //Нажимаем кнопку далее
-        ActionWithOrder.orderButtonNextPage();
-        //Заполняем дату доставки
-        ActionWithOrder.deliveryDateSelection();
+        actionWithOrder.orderButtonNextPage(driver);
+        //Заполняем дату доставкиdriver
+        actionWithOrder.deliveryDateSelection(driver);
         //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();
+        actionWithOrder.choiceColorRentScooter(driver);
         //Заполняем комментарий
-        ActionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier(driver);
         //Нажимаем кнопку Заказать
-        ActionWithOrder.pressMakeAnOrder();
+        actionWithOrder.pressMakeAnOrder(driver);
         //Нажимаем кнопку подтверждения заказа
-        ActionWithOrder.pressConfirmTheOrder();
+        actionWithOrder.pressConfirmTheOrder(driver);
         //Выполняем сверку окна подтверждения заказа по тексту
-        ActionWithOrder.pressOrderNumberWindow();
+        actionWithOrder.pressOrderNumberWindow(driver);
     }
 }
 
