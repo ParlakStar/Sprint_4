@@ -1,18 +1,14 @@
 package page;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import base.BaseSetUpChrome;
+import base.BaseSetUp;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import static org.testng.Assert.assertTrue;
+import org.openqa.selenium.WebElement;
 
 
-public class ActionWithOrder extends BaseSetUpChrome{
+public class ActionWithOrder extends BaseSetUp {
 
-    /*private BaseSetUpChrome driver;
-    public ActionWithOrder(BaseSetUpChrome driver) {
-        this.driver = driver;}*/
     //Кнопка заказать верхняя
     private final By orderButtonTop = By.xpath(".//button[@class='Button_Button__ra12g']");
     //Кнопка заказать нижняя
@@ -50,38 +46,39 @@ public class ActionWithOrder extends BaseSetUpChrome{
     public void clickButtonOrderUp() {
         driver.findElement(orderButtonTop).click();
     }
-    public void clickButtonOrderDown(WebDriver driver) {
+
+    public void clickButtonOrderDown() {
         driver.findElement(orderButtonDown).click();
     }
 
     //Заполнение поля Имя
-    public void sendNameInput(WebDriver driver) {
+    public void sendNameInput() {
         driver.findElement(nameInput).sendKeys("Александр");
     }
 
-    public void sendSurnameInput(WebDriver driver) {
+    public void sendSurnameInput() {
         driver.findElement(surnameInput).sendKeys("Парлакян");
     }
 
-    public void sendAddressInput(WebDriver driver) {
+    public void sendAddressInput() {
         driver.findElement(addressInput).sendKeys("Ленинградский проспект дом 2 кор.1");
     }
 
-    public void sendPhoneInput(WebDriver driver) {
+    public void sendPhoneInput() {
         driver.findElement(phoneInput).sendKeys("+79211065265");
     }
 
-    public void choiceStationMetro(WebDriver driver) {
+    public void choiceStationMetro() {
         driver.findElement(stationMetro).click();
         driver.findElement(stationMetro).sendKeys("Белорусская");
         driver.findElement(stationMetroUser).click();
     }
 
-    public void orderButtonNextPage(WebDriver driver) {
+    public void orderButtonNextPage() {
         driver.findElement(orderButtonNext).click();
     }
 
-    public void deliveryDateSelection(WebDriver driver) {
+    public void deliveryDateSelection() {
         driver.findElement(orderArrivalDate).click();
         driver.findElement(orderArrivalDate).sendKeys("10.10.2025");
         driver.findElement(orderArrivalDate).sendKeys(Keys.ENTER);
@@ -89,25 +86,25 @@ public class ActionWithOrder extends BaseSetUpChrome{
         driver.findElement(orderRentalPeriodDay).click();
     }
 
-    public void choiceColorRentScooter(WebDriver driver) {
+    public void choiceColorRentScooter() {
         driver.findElement(colorRentScooter).click();
     }
 
-    public void sendCommentCourier(WebDriver driver) {
+    public void sendCommentCourier() {
         driver.findElement(commentCourier).sendKeys("Надо срочно");
     }
 
-    public void pressMakeAnOrder(WebDriver driver) {
+    public void pressMakeAnOrder() {
         driver.findElement(makeAnOrder).click();
     }
 
-    public void pressConfirmTheOrder(WebDriver driver) {
+    public void pressConfirmTheOrder() {
         driver.findElement(confirmTheOrder).click();
     }
 
-    public void pressOrderNumberWindow(WebDriver driver) {
+    public void pressOrderNumberWindow(String text) {
         WebElement orderNumberElement = driver.findElement(orderNumberWindow);
         String orderNumberText = orderNumberElement.getText();
-        assertTrue(orderNumberText.contains("Заказ оформлен"), "Надпись 'Заказ оформлен' отображается некорректно");
+       Assert.assertTrue("Надпись 'Заказ оформлен' отображается некорректно",orderNumberText.contains(text));
     }
 }

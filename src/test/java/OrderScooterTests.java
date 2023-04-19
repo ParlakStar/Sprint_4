@@ -1,67 +1,70 @@
-import base.BaseSetUpChrome;
-import base.BaseSetUpFirefox;
+import base.BaseSetUp;
 import org.junit.Test;
 import page.ActionWithOrder;
 
-public class OrderScooterTestsFirefox extends BaseSetUpFirefox {
-    /*ActionWithOrder actionWithOrder = new ActionWithOrder(driver);*/
+
+public class OrderScooterTests extends BaseSetUp {
+    ActionWithOrder actionWithOrder = new ActionWithOrder();
+
     @Test
     public void testOrderScooterUpButton() {
-
         //Нажимаем кнопку Заказать
-        ActionWithOrder.clickButtonOrderUp();
-        // Заполняем поля заказа   //Имя
-        ActionWithOrder.sendNameInput();
+        actionWithOrder.clickButtonOrderUp();
+        // Заполняем поля заказа
+        //Имя
+        actionWithOrder.sendNameInput();
         //Фамилия
-        ActionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput();
         //Адресс доставки
-        ActionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput();
         //Телефон для связи с курьером
-        ActionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput();
         //Выбираем станцию метро Белорусская
-        ActionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro();
         //Нажимаем кнопку далее
-        ActionWithOrder.orderButtonNextPage();
+        actionWithOrder.orderButtonNextPage();
         //Заполняем дату доставки
-        ActionWithOrder.deliveryDateSelection();
+        actionWithOrder.deliveryDateSelection();
         //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();
+        actionWithOrder.choiceColorRentScooter();
         //Заполняем комментарий
-        ActionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier();
         //Нажимаем кнопку Заказать
-        ActionWithOrder.pressMakeAnOrder();
+        actionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа
-        ActionWithOrder.pressConfirmTheOrder();
+        actionWithOrder.pressConfirmTheOrder();
         //Выполняем сверку окна подтверждения заказа по тексту
-        ActionWithOrder.pressOrderNumberWindow();}
+        actionWithOrder.pressOrderNumberWindow("Заказ оформлен");
+    }
+
     @Test
     public void testOrderScooterDownButton() {
         //Нажимаем кнопку Заказать
-        ActionWithOrder.clickButtonOrderDown();
-        // Заполняем поля заказаA        //Имя
-        ActionWithOrder.sendNameInput();
+        actionWithOrder.clickButtonOrderDown();
+        // Заполняем поля заказа
+        //Имя
+        actionWithOrder.sendNameInput();
         //Фамилия
-        ActionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput();
         //Адресс доставки
-        ActionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput();
         //Телефон для связи с курьером
-        ActionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput();
         //Выбираем станцию метро Белорусская
-        ActionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro();
         //Нажимаем кнопку далее
-        ActionWithOrder.orderButtonNextPage();
-        //Заполняем дату доставкиdriver
-        ActionWithOrder.deliveryDateSelection();
+        actionWithOrder.orderButtonNextPage();
+        //Заполняем дату доставки
+        actionWithOrder.deliveryDateSelection();
         //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();
+        actionWithOrder.choiceColorRentScooter();
         //Заполняем комментарий
-        ActionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier();
         //Нажимаем кнопку Заказать
-        ActionWithOrder.pressMakeAnOrder();
+        actionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа
-        ActionWithOrder.pressConfirmTheOrder();
+        actionWithOrder.pressConfirmTheOrder();
         //Выполняем сверку окна подтверждения заказа по тексту
-        ActionWithOrder.pressOrderNumberWindow();
+        actionWithOrder.pressOrderNumberWindow("Заказ оформлен");
     }
 }
-
