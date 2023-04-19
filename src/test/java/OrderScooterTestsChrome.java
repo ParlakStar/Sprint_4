@@ -24,8 +24,11 @@ public class OrderScooterTestsChrome {
         //Нажимаем кнопку далее
         ActionWithOrder.orderButtonNextPage();
         //Заполняем дату доставки
-        ActionWithOrder.deliveryDateSelection();  //Выбираем чек-бокс с цветом самоката
-        ActionWithOrder.choiceColorRentScooter();    //Заполняем комментарийa        actionWithOrder.sendCommentCourier();
+        ActionWithOrder.deliveryDateSelection();
+        //Выбираем чек-бокс с цветом самоката
+        ActionWithOrder.choiceColorRentScooter();
+        //Заполняем комментарий
+        ActionWithOrder.sendCommentCourier();
         //Нажимаем кнопку Заказать
         ActionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа
