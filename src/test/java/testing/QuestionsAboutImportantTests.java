@@ -1,3 +1,5 @@
+package testing;
+
 import base.BaseSetUp;
 import org.junit.Test;
 import page.ActionWithAccordion;
