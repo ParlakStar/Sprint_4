@@ -14,23 +14,23 @@ public class OrderScooterTests extends BaseSetUp {
         actionWithOrder.clickButtonOrderUp();
         // Заполняем поля заказа
         //Имя
-        actionWithOrder.sendNameInput();
+        actionWithOrder.sendNameInput("Александр");
         //Фамилия
-        actionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput("Парлакян");
         //Адресс доставки
-        actionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput("Ленинградский проспект дом 2 кор.1");
         //Телефон для связи с курьером
-        actionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput("+79211065265");
         //Выбираем станцию метро Белорусская
-        actionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro("Белорусская");
         //Нажимаем кнопку далее
         actionWithOrder.orderButtonNextPage();
         //Заполняем дату доставки
-        actionWithOrder.deliveryDateSelection();
+        actionWithOrder.deliveryDateSelection("10.10.2025");
         //Выбираем чек-бокс с цветом самоката
         actionWithOrder.choiceColorRentScooter();
         //Заполняем комментарий
-        actionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier("Надо срочно");
         //Нажимаем кнопку Заказать
         actionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа
@@ -45,23 +45,23 @@ public class OrderScooterTests extends BaseSetUp {
         actionWithOrder.clickButtonOrderDown();
         // Заполняем поля заказа
         //Имя
-        actionWithOrder.sendNameInput();
+        actionWithOrder.sendNameInput("Александр");
         //Фамилия
-        actionWithOrder.sendSurnameInput();
+        actionWithOrder.sendSurnameInput("Парлакян");
         //Адресс доставки
-        actionWithOrder.sendAddressInput();
+        actionWithOrder.sendAddressInput("Ленинградский проспект дом 2 кор.1");
         //Телефон для связи с курьером
-        actionWithOrder.sendPhoneInput();
+        actionWithOrder.sendPhoneInput("+79211065265");
         //Выбираем станцию метро Белорусская
-        actionWithOrder.choiceStationMetro();
+        actionWithOrder.choiceStationMetro("Белорусская");
         //Нажимаем кнопку далее
         actionWithOrder.orderButtonNextPage();
         //Заполняем дату доставки
-        actionWithOrder.deliveryDateSelection();
+        actionWithOrder.deliveryDateSelection("10.10.2025");
         //Выбираем чек-бокс с цветом самоката
         actionWithOrder.choiceColorRentScooter();
         //Заполняем комментарий
-        actionWithOrder.sendCommentCourier();
+        actionWithOrder.sendCommentCourier("Надо срочно");
         //Нажимаем кнопку Заказать
         actionWithOrder.pressMakeAnOrder();
         //Нажимаем кнопку подтверждения заказа

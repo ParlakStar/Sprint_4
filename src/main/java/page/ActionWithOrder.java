@@ -52,25 +52,25 @@ public class ActionWithOrder extends BaseSetUp {
     }
 
     //Заполнение поля Имя
-    public void sendNameInput() {
-        driver.findElement(nameInput).sendKeys("Александр");
+    public void sendNameInput(String name) {
+        driver.findElement(nameInput).sendKeys(name);
     }
 
-    public void sendSurnameInput() {
-        driver.findElement(surnameInput).sendKeys("Парлакян");
+    public void sendSurnameInput(String name) {
+        driver.findElement(surnameInput).sendKeys(name);
     }
 
-    public void sendAddressInput() {
-        driver.findElement(addressInput).sendKeys("Ленинградский проспект дом 2 кор.1");
+    public void sendAddressInput(String name) {
+        driver.findElement(addressInput).sendKeys(name);
     }
 
-    public void sendPhoneInput() {
-        driver.findElement(phoneInput).sendKeys("+79211065265");
+    public void sendPhoneInput(String name) {
+        driver.findElement(phoneInput).sendKeys(name);
     }
 
-    public void choiceStationMetro() {
+    public void choiceStationMetro(String name) {
         driver.findElement(stationMetro).click();
-        driver.findElement(stationMetro).sendKeys("Белорусская");
+        driver.findElement(stationMetro).sendKeys(name);
         driver.findElement(stationMetroUser).click();
     }
 
@@ -78,9 +78,9 @@ public class ActionWithOrder extends BaseSetUp {
         driver.findElement(orderButtonNext).click();
     }
 
-    public void deliveryDateSelection() {
+    public void deliveryDateSelection(String name) {
         driver.findElement(orderArrivalDate).click();
-        driver.findElement(orderArrivalDate).sendKeys("10.10.2025");
+        driver.findElement(orderArrivalDate).sendKeys(name);
         driver.findElement(orderArrivalDate).sendKeys(Keys.ENTER);
         driver.findElement(orderRentalPeriod).click();
         driver.findElement(orderRentalPeriodDay).click();
@@ -90,8 +90,8 @@ public class ActionWithOrder extends BaseSetUp {
         driver.findElement(colorRentScooter).click();
     }
 
-    public void sendCommentCourier() {
-        driver.findElement(commentCourier).sendKeys("Надо срочно");
+    public void sendCommentCourier(String name) {
+        driver.findElement(commentCourier).sendKeys(name);
     }
 
     public void pressMakeAnOrder() {

@@ -1,7 +1,6 @@
 package page;
 
 import base.BaseSetUp;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -25,73 +24,60 @@ public class ActionWithAccordion extends BaseSetUp {
     private final By dropDownText6 = By.xpath("//p[contains(text(), 'Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.')]");
     private final By dropDownText7 = By.xpath("//p[contains(text(), 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.')]");
     private final By dropDownText8 = By.xpath("//p[contains(text(), 'Да, обязательно. Всем самокатов! И Москве, и Московской области.')]");
-    public void verifyDropDownText1(String expectedDropDownContext1 ) {
-            jsChrome.executeScript("window.scrollTo(0,document.body.scrollHeight)");
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow1);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText1);
-            String dropDownTextTest = dropDownTextElement.getText();
-            Assert.assertTrue("Надпись 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'" +
-                    " отображается на странице", dropDownTextTest.contains(expectedDropDownContext1));
-        }
-    public void verifyDropDownText2(String expectedDropDownContext2) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow2);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText2);
-            String dropDownTextTest = dropDownTextElement.getText();
-            Assert.assertTrue("Надпись 'Пока что у нас так: один заказ — один самокат." +
-                    " Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.' " +
-                    "отображается на странице", dropDownTextTest.contains(expectedDropDownContext2));
-        }
-    public void verifyDropDownText3(String expectedDropDownContext3) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow3);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText3);
-            String dropDownTextTest = dropDownTextElement.getText();
-            Assert.assertTrue("Надпись 'Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня." +
-                    " Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. " +
-                    "Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.'" +
-                    " отображается на странице", dropDownTextTest.contains(expectedDropDownContext3));
-        }
-    public void verifyDropDownText4(String expectedDropDownContext4) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow4);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText4);
-            String dropDownTextTest = dropDownTextElement.getText();
-            assertTrue("Надпись 'Только начиная с завтрашнего дня. Но скоро станем расторопнее.' отображается на странице",
-                    dropDownTextTest.contains(expectedDropDownContext4));
-        }
-    public void verifyDropDownText5(String expectedDropDownContext5) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow5);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText5);
-            String dropDownTextTest = dropDownTextElement.getText();
-            assertTrue("Надпись 'Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.'" +
-                    " отображается на странице", dropDownTextTest.contains(expectedDropDownContext5));
-        }
-    public void verifyDropDownText6(String expectedDropDownContext6) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow6);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText6);
-            String dropDownTextTest = dropDownTextElement.getText();
-            assertTrue("Надпись 'Самокат приезжает к вам с полной зарядкой." +
-                    " Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.'" +
-                    " отображается на странице", dropDownTextTest.contains(expectedDropDownContext6));
-        }
-    public void verifyDropDownText7(String expectedDropDownContext7) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow7);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText7);
-            String dropDownTextTest = dropDownTextElement.getText();
-            assertTrue("Надпись 'Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим." +
-                    " Все же свои.' отображается на странице", dropDownTextTest.contains(expectedDropDownContext7));
-        }
-    public void verifyDropDownText8(String expectedDropDownContext8) {
-            WebElement dropdownArrowElement = driver.findElement(dropdownArrow8);
-            dropdownArrowElement.click();
-            WebElement dropDownTextElement = driver.findElement(dropDownText8);
-            String dropDownTextTest = dropDownTextElement.getText();
-            assertTrue("Надпись 'Да, обязательно. Всем самокатов! И Москве, и Московской области.' " +
-                    "отображается на странице", dropDownTextTest.contains(expectedDropDownContext8));
-        }
+
+    public String getDropDownText1() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow1);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText1);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText2() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow2);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText2);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText3() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow3);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText3);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText4() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow4);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText4);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText5() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow5);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText5);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText6() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow6);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText6);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText7() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow7);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText7);
+        return dropDownTextElement.getText();
+    }
+
+    public String getDropDownText8() {
+        WebElement dropdownArrowElement = driver.findElement(dropdownArrow8);
+        dropdownArrowElement.click();
+        WebElement dropDownTextElement = driver.findElement(dropDownText8);
+        return dropDownTextElement.getText();
+    }
 }
